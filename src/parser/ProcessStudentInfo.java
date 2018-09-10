@@ -53,6 +53,7 @@ public class ProcessStudentInfo {
 				
 				//Create XMLReader object.
 				XmlReader xmlReader = new XmlReader();
+
 				
 				
 				//Parse Data using parseData method and then store data into Selenium ArrayList.
