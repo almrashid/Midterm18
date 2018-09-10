@@ -14,6 +14,12 @@ public class FortuneEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
+
+		EmployeeInfo employee=new EmployeeInfo() ;
+		employee.deptId=100;
+
+
+
 		
 
 

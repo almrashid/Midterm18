@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo implements Employee {
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -21,7 +21,11 @@ public class EmployeeInfo {
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+	static int employeeId;
+	static  String name;
+	static double bonus;
+	static  int salary;
+	int deptId;
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -33,11 +37,16 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
+		this.employeeId=employeeId;
 		
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+		this.name=name;
+		this.employeeId=employeeId;
 	}
+	 public EmployeeInfo(){
+
+	 }
 	
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
@@ -48,7 +57,15 @@ public class EmployeeInfo {
 	 * 
 	 */
 	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
+
+		if (numberOfYearsWithCompany>3) {
+			bonus =  salary * .1;
+		}else {
+			bonus =  salary * .08;
+		}
 		int total=0;
+
+
 		return total;
 	}
 	
@@ -73,6 +90,42 @@ public class EmployeeInfo {
 
 		return total;
 	}
+
+	@Override
+	public int employeeId() {
+		this.employeeId=employeeId;
+		System.out.println("employeeId"+employeeId);
+
+		return employeeId;
+	}
+
+	@Override
+	public String employeeName() {
+		System.out.println("employeeName___"+ name);
+
+
+		return name;
+	}
+
+	@Override
+	public void assignDepartment() {
+		this.deptId=deptId;
+
+	}
+
+	@Override
+	public int calculateSalary() {
+		salary+=salary;
+
+		return salary;
+	}
+
+	@Override
+	public void benefitLayout() {
+		System.out.println("Employee has medical and dental");
+
+	}
+
 	private static class DateConversion {
 
 		public DateConversion(Months months){}

@@ -1,11 +1,26 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
+A. A programming language is a special language programmers use to develop software programs, scripts,
+or other sets of instructions for computers to execute.
 What jdk contains or composed of and define each components?
+A.Jdk contains:
+-The Runtime Interpreter.
+-The Compiler.
+-The Applet Viewer.
+-The Debugger.
+-The Class File Disassembler.
+-The Header and Stub File Generator.
+-The Documentation Generator.
+-Applet Demos.
 What is IDE?
+A.Integreted Devlopment environment. some popular ide like Intelli Idea, eclipse,netbeans.
 What are the IDEs available in the market to support java?
+A.Those are : InteliJ Idea, Eclipse,Netbeans
 Explain the entire java life cycle.
+A.After w
+
+
 what is class?
 What is object?
 What is the entry point of an application?

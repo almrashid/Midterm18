@@ -1,8 +1,14 @@
 package datastructure;
 
+import jdk.nashorn.internal.ir.WhileNode;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 public class DataReader {
 
 	public static void main(String[] args) {
+
 		/*
 		 * User API to read the below textFile and print to console.
 		 * Use BufferedReader class. 
@@ -18,9 +24,27 @@ public class DataReader {
 		 * Use For Each loop/while loop/Iterator to retrieve data.
 		 */
 
-		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		//String textFile = System.getProperty("user.dir") + "/src//data//self-driving-car.txt";
+		String path="C:/Users/almrashid/Desktop/midterm/MidtermJuly2018/src/data/self-driving-car";
 
+		FileReader fr=null;
 
+		BufferedReader br=null;
+		try{
+			fr=new FileReader(path);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+		try{
+			br=new BufferedReader(fr);
+			String data="";
+			while ((data=br.readLine())!=null){
+				System.out.println(data);
+			}
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 
 	}
 
