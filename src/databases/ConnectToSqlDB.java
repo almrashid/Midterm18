@@ -21,10 +21,11 @@ public class ConnectToSqlDB {
     public static Statement statement = null;
     public static PreparedStatement ps = null;
     public static ResultSet resultSet = null;
-
     public static Properties loadProperties() throws IOException{
+        String path="C:\\Users\\almrashid\\Desktop\\midterm\\MidtermJuly2018\\src\\secret.properties";
+
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream("src/secret.properties");
+        InputStream ism = new FileInputStream(path);
         prop.load(ism);
         ism.close();
         return prop;
