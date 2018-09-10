@@ -18,19 +18,49 @@ A.Integreted Devlopment environment. some popular ide like Intelli Idea, eclipse
 What are the IDEs available in the market to support java?
 A.Those are : InteliJ Idea, Eclipse,Netbeans
 Explain the entire java life cycle.
-A.After w
 
+A.After creating .java file we compile it using java compiler which result in .class file. The
+.class file contains bytecodes and the file then loaded  into memory by the class loader and finally jvm reads
+ the bytecodes in memory and translate them into machine code.
 
 what is class?
+A. class is a blueprint or a template.
 What is object?
+A. Object is a instance of a class in java.
 What is the entry point of an application?
+A. main method is the entry point of java.
 Why main is static?
+A. we don't want to create object when we run java program .As static method can
+be accessed without creating object.
+
 Which class is the superclass of all classes?
+A. java.lang.object is a superclass of all class
+
 What is difference between path and classpath variables?
+A.Path is an environment variable which is used by the operating system
+to find the executables. Classpath is an environment
+variable which is used by the Java compiler to find the path.
+
 What is the difference between an Interface and Abstract class?
+
+A. Interface is a collections of abstract methods and Abstact class
+can have both abstract and concrete method. class implements interface
+and extends abstract class.
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+A. No, class implements interfaces.
 what is Access Specifier?
+Java access modifiers are used to provide access control in Java. Access modifier are public
+private,default and private.
+
 What is OOP ? Define each feature of java OOP.
+Ans. OOP stands for object oriented programming. some features of oop are -
+-Inheritance-child class aquires parent class properties
+-Abstraction- implementation hiding . atleast one abstract method and may hava many concrete method
+ -Encapsulaton- data hiding . we use private keyword so that outer class can not access it
+ -polymorphism-Polymorphism is the ability of an object to take on many forms.
+ The most common use of polymorphism in OOP occurs when a
+ parent class reference is used to refer to a child class object.
+
 What is Java Package and which package is imported by default?
 What is API? Name list of API that you have used so far.
 Does java support multiple inheritance, explain why or why not?
