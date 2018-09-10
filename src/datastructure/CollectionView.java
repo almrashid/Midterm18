@@ -22,7 +22,7 @@ public static void main(String[] args) {
         for (Map.Entry<Integer,String> data : map.entrySet())
                 System.out.println(data.getKey()+"  " + data.getValue());
 }
-        //       
+
 
        
         
