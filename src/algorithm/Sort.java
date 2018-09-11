@@ -35,6 +35,19 @@ public class Sort {
         final long startTime = System.currentTimeMillis();
         int [] list = array;
         //implement here
+        for (int i = 1; i < list.length; i++) {
+            int temp = list[i];
+            int hole = i;
+
+            while (hole > 0 && list[hole-1] >temp) {
+                list[hole] = list[hole-1];
+                hole = hole - 1;
+            }
+            list[hole] =temp;
+        }
+
+
+
 
 
 
@@ -48,7 +61,16 @@ public class Sort {
         int [] list = array;
         //implement here
 
-        
+        final long startTime = System.currentTimeMillis();
+        for (int z = 0; z < list.length - 1;z++) {       // n times 10
+            for (int a = 0; a < list.length-1-z; a++) {  // n times 10
+                if (list[a] > list[a + 1]) {
+                    int temp = list[a];                  // n * n == n^2
+                    list[a] = list[a + 1];                 // 10 * 10 = 100
+                    list[a + 1] = temp;
+                }
+            }
+        }
         
         return list;
     }
