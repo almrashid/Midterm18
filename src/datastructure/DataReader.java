@@ -4,6 +4,10 @@ import jdk.nashorn.internal.ir.WhileNode;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
 
 public class DataReader {
 
@@ -30,6 +34,8 @@ public class DataReader {
 		FileReader fr=null;
 
 		BufferedReader br=null;
+		String store="";
+		String line="";
 		try{
 			fr=new FileReader(path);
 		}catch(Exception e){
@@ -38,12 +44,35 @@ public class DataReader {
 
 		try{
 			br=new BufferedReader(fr);
-			String data="";
-			while ((data=br.readLine())!=null){
-				System.out.println(data);
-			}
+			
+			while ((line=br.readLine())!=null){
+				store+=line;
+		}
 		}catch (Exception e){
 			e.printStackTrace();
+		}
+
+		String[] storeArray = store.split(" ");
+		List<String> storeList = new LinkedList<String>();
+		Stack<String> storeStack = new Stack<String>();
+
+		for (String element: storeArray) {
+			storeList.add(element);
+			storeStack.push(element);
+		}
+		System.out.println("\n\nLinkedlist LIFO:");
+		Iterator<String> itr = storeList.iterator();
+		while (itr.hasNext()){
+			System.out.print(itr.next()+" ");
+		}
+		System.out.println("\n\nStack LIFO:");
+
+//		for (int k = 0; k<storeStack.size();k++){
+//			System.out.print(storeStack.pop()+ " ");
+//		}
+		while (!storeStack.isEmpty())
+		{
+			System.out.print(storeStack.pop() + " ");
 		}
 
 	}
