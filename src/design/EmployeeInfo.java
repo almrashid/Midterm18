@@ -20,12 +20,51 @@ public class EmployeeInfo implements Employee {
 	/*
 	 * declare few static and final fields and some non-static fields
 	 */
-	static String companyName;
-	static int employeeId;
-	static  String name;
-	static double bonus;
-	static  int salary;
-	int deptId;
+	private static String companyName;
+	private static int employeeId;
+	private static  String name;
+	private static double bonus = 0;
+	public static int salary=65000;
+	public int years =0;
+
+
+
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public static String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+
+		EmployeeInfo.name = name;
+	}
+
+	public static double getBonus() {
+		return bonus;
+	}
+
+	public  void setBonus(double bonus) {
+		EmployeeInfo.bonus = bonus;
+	}
+
+
+
+	public static String getCompanyName() {
+		return companyName;
+	}
+
+	public  void setCompanyName(String companyName) {
+		EmployeeInfo.companyName = companyName;
+	}
+
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -57,16 +96,20 @@ public class EmployeeInfo implements Employee {
 	 * 
 	 */
 	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
+		double performance=0;
+		boolean Bestperformce=true;
 
-		if (numberOfYearsWithCompany>3) {
-			bonus =  salary * .1;
-		}else {
-			bonus =  salary * .08;
-		}
+
 		int total=0;
+		if((numberOfYearsWithCompany<=1) && (Bestperformce=true)) {
+			performance=.1;
 
+		}else
+			performance=.08;
 
+		total= (int) (salary+(salary*performance));
 		return total;
+
 	}
 	
 	/*
@@ -101,7 +144,7 @@ public class EmployeeInfo implements Employee {
 
 	@Override
 	public String employeeName() {
-		System.out.println("employeeName___"+ name);
+		System.out.println("employeeName---"+ name);
 
 
 		return name;
@@ -109,15 +152,13 @@ public class EmployeeInfo implements Employee {
 
 	@Override
 	public void assignDepartment() {
-		this.deptId=deptId;
 
 	}
 
 	@Override
 	public int calculateSalary() {
-		salary+=salary;
 
-		return salary;
+		return this.salary;
 	}
 
 	@Override
