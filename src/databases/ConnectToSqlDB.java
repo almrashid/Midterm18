@@ -22,10 +22,10 @@ public class ConnectToSqlDB {
     public static PreparedStatement ps = null;
     public static ResultSet resultSet = null;
     public static Properties loadProperties() throws IOException{
-        String path="C:\\Users\\almrashid\\Desktop\\midterm\\MidtermJuly2018\\src\\secret.properties";
+
 
         Properties prop = new Properties();
-        InputStream ism = new FileInputStream(path);
+        InputStream ism = new FileInputStream("src/secret.properties");
         prop.load(ism);
         ism.close();
         return prop;
@@ -198,7 +198,7 @@ public class ConnectToSqlDB {
                 String name = rs.getString("stName");
                 String id = rs.getString("stID");
                 String dob = rs.getString("stDOB");
-                //System.out.format("%s, %s\n", name, id);
+                System.out.format("%s, %s\n", name, id);
                 user = new User(name,id, dob);
                 list.add(user);
 

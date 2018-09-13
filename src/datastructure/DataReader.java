@@ -44,7 +44,7 @@ public class DataReader {
 
 		try{
 			br=new BufferedReader(fr);
-			
+
 			while ((line=br.readLine())!=null){
 				store+=line;
 		}
